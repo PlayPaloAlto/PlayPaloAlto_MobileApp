@@ -1,0 +1,64 @@
+.scroll
+{
+	position: relative;
+}
+
+.button-icon .icon:before, .button-icon.icon:before
+{
+	font-size: 70px;
+	padding: 15px;
+}
+
+#row2
+{
+	position: relative;
+	top: 10px;
+
+}
+
+#row3
+{
+	position: relative;
+	top: 20px;
+}
+
+.col
+{
+	padding: 15px;
+}
+
+
+.menu-content
+{
+	background-color: #6A9A1F;
+}
+
+.bar
+{
+	background-color: #00ACE9;
+}
+
+.title
+{
+	color: #444;
+	line-height: none;
+	font-weight: bold;
+}
+
+
+h3
+{
+	color: #444;
+	margin-top: 0px;
+	font-size: 19px;
+}
+
+#burger
+{
+	position: relative;
+	font-size: 26px;
+	vertical-align: middle;
+	display: block;
+	color: white;
+	top: 3px;
+}
