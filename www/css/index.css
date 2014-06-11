@@ -12,14 +12,14 @@
 #row2
 {
 	position: relative;
-	top: 10px;
+	top: 20px;
 
 }
 
 #row3
 {
 	position: relative;
-	top: 20px;
+	top: 30px;
 }
 
 .col
@@ -27,18 +27,24 @@
 	padding: 15px;
 }
 
-
-.menu-content
+.button
 {
-	background-color: #6A9A1F;
+	color: white;
 }
 
-.bar
+.pane, .view
 {
 	background-color: #00ACE9;
 }
 
-.title
+.bar.bar-positive
+{
+	background-color: #ddd;
+	border-color: #444;
+	background-image: none;
+}
+
+.bar.bar-positive .title
 {
 	color: #444;
 	line-height: none;
@@ -48,7 +54,7 @@
 
 h3
 {
-	color: #444;
+	color: white;
 	margin-top: 0px;
 	font-size: 19px;
 }
@@ -59,6 +65,94 @@ h3
 	font-size: 26px;
 	vertical-align: middle;
 	display: block;
-	color: white;
 	top: 3px;
+	color: #444;
+}
+
+.bar .button.button-icon:before, .bar .button .icon:before, .bar .button.icon:before, .bar .button.icon-left:before, .bar .button.icon-right:before
+{
+	color: #444;
+}
+
+.subdued
+{
+	font-size: 22px;
+	font-weight: bold;
+}
+a.subdued
+{
+	color: #444;
+}
+
+#category
+{
+	color: #6A9A1F;
+	font-weight: bold;
+	font-size: 16px;
+}
+
+#map
+{
+	font-weight: bold;
+	color: red;
+	font-size: 16px;
+}
+
+.tab-item
+{
+	max-width: none;
+}
+
+#descr
+{
+	text-align: justify;
+}
+
+#unstarted_badge
+{
+	background-color: #EF4E3A;
+}
+
+#progress_badge
+{
+	background-color: #d39211;
+}
+
+#completed_badge
+{
+	background-color: #498f24;
+}
+
+h2
+{
+	color: #00ACE9;
+}
+
+#no
+{
+	color: #00ACE9;
+}
+
+.item-note
+{
+	font-size: 20px;
+	color: #444;
+}
+
+#leaderboard_header
+{
+	background-color: #82D6F4;
+	min-height: 70px;
+	font-weight: normal;
+	white-space: normal;
+	text-align: justify;
+
+}
+
+#challenges_link
+{
+	font-weight: bold;
+	font-size: 18px;
+	text-decoration: none;
+	color: black;
 }

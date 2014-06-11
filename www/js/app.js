@@ -1,5 +1,7 @@
 angular.module('ionicApp', ['ionic'])
 
+
+
 .config(function($stateProvider, $urlRouterProvider) {
 
   $stateProvider
@@ -49,6 +51,16 @@ angular.module('ionicApp', ['ionic'])
         }
       }
     })
+
+    .state('tabs.event_info', {
+      url: "/event_info",
+      views: {
+        'home-tab': {
+          templateUrl: "event_info.html"
+        }
+      }
+    })
+
     .state('tabs.coupons', {
       url: "/coupons",
       views: {
