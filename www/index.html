@@ -5,9 +5,11 @@
     
     <title>PlayPaloAlto</title>
 
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <link href="http://code.ionicframework.com/1.0.0-beta.6/css/ionic.css" rel="stylesheet">
     <script src="http://code.ionicframework.com/1.0.0-beta.6/js/ionic.bundle.js"></script>
      <script src="js/app.js"></script>
+     <script src="js/animate/jquery.animateNumber.js"></script>
      <link href="/css/index.css" rel="stylesheet">
 
 
@@ -17,8 +19,6 @@
         $ionicSideMenuDelegate.toggleLeft();
         };
       }
-
-
      </script>
 
   </head>
@@ -313,8 +313,46 @@
 
     <script id="profile.html" type="text/ng-template">
       <ion-view title="Profile">
-        <ion-content class="padding">
-          <p><img src="http://ionicframework.com/img/diagrams/tabs-nav-stack.png" style="width:100%"></p>
+        <ion-content>
+          
+
+<div class="card">
+  <div class="item item-divider" id="profile_title">
+    <center>Aris</center>
+  </div>
+  <div class="item item-text-wrap">
+    <center><img src="/icons/aris.jpg" style="border-radius: 50%;" height="80" width="80"></center>
+  </div>
+  <div class="item item-divider">
+    <center><img src="/icons/badge.png" height="42" width="35">
+    <i id="pts">400</i>
+    <img src="/icons/xp.png" height="42" width="42">
+    <i id="pts">400</i></center>
+  </div>
+</div>
+
+<div class="list" id="profie_list">
+
+  <a class="item item-icon-left">
+    <i class="icon ion-plane"></i>
+    <i id="no">2125</i> Survivor Events
+  </a>
+
+  <a class="item item-icon-left">
+    <i class="icon ion-earth"></i>
+    <i id="no">25</i> Cleaning Events
+  </a>
+  <a class="item item-icon-left" id="counter">
+    <i class="icon ion-email"></i>
+    <i id="no">31</i> Challenges
+  </a>
+
+</div>
+
+<button class="button button-block button-dark" id="profile_button">
+  View Your Coupons
+</button>
+
         </ion-content>
       </ion-view>
     </script>
