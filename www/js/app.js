@@ -61,6 +61,15 @@ angular.module('ionicApp', ['ionic'])
       }
     })
 
+    .state('tabs.coupon_info', {
+      url: "/coupon_info",
+      views: {
+        'home-tab': {
+          templateUrl: "coupon_info.html"
+        }
+      }
+    })
+
     .state('tabs.coupons', {
       url: "/coupons",
       views: {

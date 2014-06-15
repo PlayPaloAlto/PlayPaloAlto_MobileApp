@@ -46,6 +46,37 @@
 
   <!-- Right menu -->
   <ion-side-menu side="right">
+    <div class="list" id="black">
+
+    <div class="item item-divider" id="black">
+      <center><img src="/icons/aris.jpg" style="border-radius: 50%;" height="85" width="85"></br>Welcome Aris</center>
+    </div>
+
+    <a class="item" menu-close href="#/tab/home" id="black">
+      <i class="icon ion-home"></i>&nbsp&nbspHome
+    </a>
+    <a class="item" menu-close href="#/tab/events" id="black">
+      <i class="icon ion-location"></i>&nbsp&nbspEvents
+    </a>
+    <a class="item" menu-close href="#/tab/challenges" id="black">
+      <i class="icon ion-android-hand"></i>&nbsp&nbspChallenges
+    </a>
+    <a class="item" menu-close href="#/tab/profile" id="black">
+      <i class="icon ion-android-contact"></i>&nbsp&nbspProfile
+    </a>
+    <a class="item" menu-close href="#/tab/leaderboard" id="black">
+      <i class="icon ion-arrow-graph-up-right"></i>&nbsp&nbspLeaderboard
+    </a>
+    <a class="item" menu-close href="#/tab/coupons" id="black">
+      <i class="icon ion-ios7-pricetag"></i>&nbsp&nbspCoupons
+    </a>
+    <a class="item" menu-close href="#" id="black">
+      <i class="icon ion-ios7-gear"></i>&nbsp&nbspSettings
+    </a>
+    <a class="item" menu-close href="#" id="black">
+      <i class="icon ion-log-out"></i>&nbsp&nbspLogout
+    </a>
+  </div>
   </ion-side-menu>
 </ion-side-menus>
 
@@ -314,44 +345,42 @@
     <script id="profile.html" type="text/ng-template">
       <ion-view title="Profile">
         <ion-content>
-          
+        
+          <div class="card">
+            <div class="item item-divider" id="profile_title">
+              <center>Aris</center>
+            </div>
+            <div class="item item-text-wrap">
+              <center><img src="/icons/aris.jpg" style="border-radius: 50%;" height="80" width="80"><a href="#/tab/leaderboard" id="position_profile">#32nd</a></center>
+            </div>
+            <div class="item item-divider">
+              <center><img src="/icons/badge.png" height="42" width="35">
+              <i id="pts">400</i>
+              <img src="/icons/xp.png" height="42" width="42">
+              <i id="pts">400</i></center>
+            </div>
+          </div>
 
-<div class="card">
-  <div class="item item-divider" id="profile_title">
-    <center>Aris</center>
-  </div>
-  <div class="item item-text-wrap">
-    <center><img src="/icons/aris.jpg" style="border-radius: 50%;" height="80" width="80"></center>
-  </div>
-  <div class="item item-divider">
-    <center><img src="/icons/badge.png" height="42" width="35">
-    <i id="pts">400</i>
-    <img src="/icons/xp.png" height="42" width="42">
-    <i id="pts">400</i></center>
-  </div>
-</div>
+          <div class="list" id="profie_list">
 
-<div class="list" id="profie_list">
+            <a class="item item-icon-left">
+              <i class="icon ion-plane"></i>
+              <i id="no">2125</i> Survivor Events
+            </a>
 
-  <a class="item item-icon-left">
-    <i class="icon ion-plane"></i>
-    <i id="no">2125</i> Survivor Events
-  </a>
+            <a class="item item-icon-left">
+              <i class="icon ion-earth"></i>
+              <i id="no">25</i> Cleaning Events
+            </a>
+            <a class="item item-icon-left" id="counter">
+              <i class="icon ion-email"></i>
+              <i id="no">31</i> Challenges
+            </a>
+          </div>
 
-  <a class="item item-icon-left">
-    <i class="icon ion-earth"></i>
-    <i id="no">25</i> Cleaning Events
-  </a>
-  <a class="item item-icon-left" id="counter">
-    <i class="icon ion-email"></i>
-    <i id="no">31</i> Challenges
-  </a>
-
-</div>
-
-<button class="button button-block button-dark" id="profile_button">
-  View Your Coupons
-</button>
+          <button class="button button-block button-dark" id="profile_button">
+            View Your Coupons
+          </button>
 
         </ion-content>
       </ion-view>
@@ -360,8 +389,57 @@
     <script id="coupons.html" type="text/ng-template">
       <ion-view title="Coupons">
         <ion-content>
-          <p>@IonicFramework</p>
-          <p>@DriftyCo</p>
+          <div class="card">
+            <div class="item item-divider">
+              <center>Coupon1</center>
+            </div>
+            <div class="item item-text-wrap">
+              Basic info
+            </div>
+            <div class="item item-divider">
+            <a href="#tab/coupon_info" id="link_coupons">
+              <center><i><img src="/icons/badge.png" height="32" width="25"></i><i id="text_coupons">500</i><i class="icon ion-chevron-right" id="right_coupons"></i></center></a>
+            </div>
+          </div>
+
+                    <div class="card">
+            <div class="item item-divider">
+              <center>Coupon1</center>
+            </div>
+            <div class="item item-text-wrap">
+              Basic info
+            </div>
+            <div class="item item-divider">
+            <a href="#tab/coupon_info" id="link_coupons">
+              <center><i><img src="/icons/badge.png" height="32" width="25"></i><i id="text_coupons">500</i><i class="icon ion-chevron-right" id="right_coupons"></i></center></a>
+            </div>
+          </div>
+
+                    <div class="card">
+            <div class="item item-divider">
+              <center>Coupon1</center>
+            </div>
+            <div class="item item-text-wrap">
+              Basic info
+            </div>
+            <div class="item item-divider">
+            <a href="#tab/coupon_info" id="link_coupons">
+              <center><i><img src="/icons/badge.png" height="32" width="25"></i><i id="text_coupons">500</i><i class="icon ion-chevron-right" id="right_coupons"></i></center></a>
+            </div>
+          </div>
+
+                    <div class="card">
+            <div class="item item-divider">
+              <center>Coupon1</center>
+            </div>
+            <div class="item item-text-wrap">
+              Basic info
+            </div>
+            <div class="item item-divider">
+            <a href="#tab/coupon_info" id="link_coupons">
+              <center><i><img src="/icons/badge.png" height="32" width="25"></i><i id="text_coupons">500</i><i class="icon ion-chevron-right" id="right_coupons"></i></center></a>
+            </div>
+          </div>
         </ion-content>
       </ion-view>
     </script>
@@ -414,6 +492,50 @@
         </ion-content>
       </ion-view>
     </script>
+
+
+<script id="coupon_info.html" type="text/ng-template">
+      <ion-view title="Coupon1">
+        <ion-content>
+          <div class="list card">
+
+            <div class="item item-avatar">
+              <img src="mcfly.jpg">
+              <h2>10% at Harrods</h2>
+              <p>Expires on: November 05, 1955</p>
+            </div>
+
+            <div class="item item-body">
+              <p id="descr">
+                This is a "Facebook" styled Card. The header is created from a Thumbnail List item,
+                the content is from a card-body consisting of an image and paragraph text. The footer
+                consists of tabs, icons aligned left, within the card-footer.
+              </p>
+              <p>
+                <center><a class="subdued"><img src="/icons/badge.png" height="32" width="25"><i id="pts_coupon">239</i></a></center>
+              </p>
+            </div>
+
+            <div class="item tabs tabs-secondary tabs-icon-left">
+              <a id="category" class="tab-item" href="#">
+                <i class="icon ion-ios7-people"></i>
+                500 Purchased
+              </a>
+            </div>
+
+            <div class="item tabs tabs-secondary tabs-icon-left">
+              <a id="map" class="tab-item" href="#">
+                <i class="icon ion-checkmark-round"></i>
+                Buy Now!
+              </a>
+            </div>
+
+        </div>
+
+        </ion-content>
+      </ion-view>
+    </script>
+
 
 
   </body>
