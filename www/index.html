@@ -14,16 +14,18 @@
 
 
      <script>
-     function ContentController($scope, $ionicSideMenuDelegate) {
+     function ContentController($scope, $ionicSideMenuDelegate,$http) {
         $scope.toggleLeft = function() {
         $ionicSideMenuDelegate.toggleLeft();
         };
       }
      </script>
 
-  </head>
 
-  <body>
+      
+
+  </head>
+  <body ng-controller="ApiCtrl">
     
 
 
@@ -122,49 +124,9 @@
       <ion-view title="Events" class="padding">
         <ion-content>
          
-          <div class="list">
-
-              <a class="item item-thumbnail-left" href="#/tab/event_info">
-                <img src="cover.jpg">
-                <h2>Pretty Hate Machine</h2>
-                <p>Nine Inch Nails</p>
-              </a>
-
-              <a class="item item-thumbnail-left" href="#/tab/event_info">
-                <img src="cover.jpg">
-                <h2>Pretty Hate Machine</h2>
-                <p>Nine Inch Nails</p>
-              </a>
-
-              <a class="item item-thumbnail-left" href="#/tab/event_info">
-                <img src="cover.jpg">
-                <h2>Pretty Hate Machine</h2>
-                <p>Nine Inch Nails</p>
-              </a>
-
-              <a class="item item-thumbnail-left" href="#/tab/event_info">
-                <img src="cover.jpg">
-                <h2>Pretty Hate Machine</h2>
-                <p>Nine Inch Nails</p>
-              </a>
-
-              <a class="item item-thumbnail-left" href="#/tab/event_info">
-                <img src="cover.jpg">
-                <h2>Pretty Hate Machine</h2>
-                <p>Nine Inch Nails</p>
-              </a>
-
-              <a class="item item-thumbnail-left" href="#/tab/event_info">
-                <img src="cover.jpg">
-                <h2>Pretty Hate Machine</h2>
-                <p>Nine Inch Nails</p>
-              </a>
-
-              <a class="item item-thumbnail-left" href="#/tab/event_info">
-                <img src="cover.jpg">
-                <h2>Pretty Hate Machine</h2>
-                <p>Nine Inch Nails</p>
-              </a>              
+          <div class="list" ng-repeat="k in events">
+            <a class="item item-thumbnail-left" href="#/tab/event_info">
+            <h2>{{k.Name}}</h2><p>{{k.Description}}</p></a>
 
           </div>
 
@@ -248,95 +210,10 @@
       <ion-view title="Leaderboard">
         <ion-content>
 
-          <div class="list">
-            <div class="item item-divider" id="leaderboard_header">
-              You are placed 32nd. But dont worry! Check out our special <a href="#/tab/challenges" id="challenges_link">challenges</a> which will boost your XP!
-            </div>
-            <a class="item item-avatar">
-              <img src="venkman.jpg">
-              <h2>Aris</h2>                  
-              <span class="item-note">
-                450xp
-              </span>
-              <p><i id="no">25</i> Events, <i id="no">15</i> Challenges</p>
-
-            </a>
-
-            <a class="item item-avatar">
-              <img src="venkman.jpg">
-              <h2>Nikos</h2>
-              <span class="item-note">
-                340xp
-              </span>
-              <p><i id="no">15</i> Events, <i id="no">5</i> Challenges</p>
-            </a>
-
-            <a class="item item-avatar">
-              <img src="venkman.jpg">
-              <h2>Frankie</h2>
-              <span class="item-note">
-                132xp
-              </span>
-              <p><i id="no">53</i> Events, <i id="no">15</i> Challenges</p>
-            </a>
-
-            <a class="item item-avatar">
-              <img src="venkman.jpg">
-              <h2>Richy</h2>
-              <span class="item-note">
-                20xpx
-              </span>
-              <p><i id="no">235</i> Events, <i id="no">52</i> Challenges</p>
-            </a>
-
-                        <a class="item item-avatar">
-              <img src="venkman.jpg">
-              <h2>Richy</h2>
-              <span class="item-note">
-                20xpx
-              </span>
-              <p><i id="no">235</i> Events, <i id="no">52</i> Challenges</p>
-            </a>
-
-                        <a class="item item-avatar">
-              <img src="venkman.jpg">
-              <h2>Richy</h2>
-              <span class="item-note">
-                20xpx
-              </span>
-              <p><i id="no">235</i> Events, <i id="no">52</i> Challenges</p>
-            </a>
-
-                        <a class="item item-avatar">
-              <img src="venkman.jpg">
-              <h2>Richy</h2>
-              <span class="item-note">
-                20xpx
-              </span>
-              <p><i id="no">235</i> Events, <i id="no">52</i> Challenges</p>
-            </a>
-
-                        <a class="item item-avatar">
-              <img src="venkman.jpg">
-              <h2>Richy</h2>
-              <span class="item-note">
-                20xpx
-              </span>
-              <p><i id="no">235</i> Events, <i id="no">52</i> Challenges</p>
-            </a>
-
-                        <a class="item item-avatar">
-              <img src="venkman.jpg">
-              <h2>Richy</h2>
-              <span class="item-note">
-                20xpx
-              </span>
-              <p><i id="no">235</i> Events, <i id="no">52</i> Challenges</p>
-            </a>
-
-        </div>
-
-
+          <div class="list" id="leaderboard-list">
+              <div class="item item-divider" id="leaderboard_header">You are placed 32nd. But dont worry! Check out our special <a href="#/tab/challenges" id="challenges_link">challenges</a> which will boost your XP!
+              </div>
+          </div>
 
         </ion-content>
       </ion-view>
@@ -535,7 +412,6 @@
         </ion-content>
       </ion-view>
     </script>
-
 
 
   </body>

@@ -1,7 +1,5 @@
 angular.module('ionicApp', ['ionic'])
 
-
-
 .config(function($stateProvider, $urlRouterProvider) {
 
   $stateProvider
@@ -85,5 +83,41 @@ angular.module('ionicApp', ['ionic'])
 })
 
 .controller('HomeTabCtrl', function($scope) {
+
   console.log('HomeTabCtrl');
+})
+
+
+// function ApiCtrl($scope){
+
+//   var events = $.get('http://www.playpaloalto.com/api/v2/events/?token=dzhdliusngapzvalqcbgqgmrekkphn').then(events);
+//   var events_list = events;
+//   console.log(events_list);
+
+//   //$scope.events = events.list_events;
+// }
+
+
+
+.service('dataService', function($http) {
+  this.getData = function() {
+      return $http({
+          method: 'GET',
+          url: 'http://www.playpaloalto.com/api/v2/events?token=dzhdliusngapzvalqcbgqgmrekkphn'
+       });
+   }
+})
+
+.controller('ApiCtrl', function($scope, dataService) {
+    $scope.events = null;
+    dataService.getData().then(function(dataResponse) {
+        $scope.events = dataResponse.data.list_events;
+
+    });
 });
+
+
+
+
+
+
